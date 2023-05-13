@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("image/background.gif");
+}
+
+/* CONTAINER */
+.container {
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto;
+    grid-template-rows: 70px 50px auto auto;
+    grid-template-areas: 
+    'gHead'
+    'gNav'
+    'gContent'
+    'gFoot';
+}
+
+/* .container > div {
+    border: 1px solid red;
+} */
+
+/* HEADER */
+.head {
+    grid-area: gHead;
+    background-color: #182e49;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.head .head-left {
+    float: left;
+}
+
+.head .head-left a {
+    text-decoration: none;
+}
+
+.head .head-left .logo {
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.head .head-left .name {
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.head .head-right .head-icon {
+    padding: 5px 20px;
+    float: right;
+}
+
+.head .head-right .head-icon a {
+    text-decoration: none;
+}
+
+.head .head-right .head-icon a:hover p {
+    text-shadow: 0px 0px 5px;
+    color: cyan;
+}
+
+.head .head-right .head-icon p {
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 0px;
+}
+
+/* NAVIGATION BAR */
+.nav {
+    grid-area: gNav;
+    background-color: #a18c5c;
+    border-radius: 5px;
+}
+
+.search-box {
+    margin: 7px 0px;
+    width: 22%;
+    float: left;
+}
+
+.search-box > input {
+    width: 75%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 6px;
+    margin-left: 10px;
+    border: 1px solid #3f1d0b;
+    color: black;
+}
+
+.search-box > button {
+    width: 17%;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    right: 19.5%;
+    background-color: white;
+}
+
+.search-box > button i {
+    color: black;
+}
+
+.search-box > button:hover {
+    background-color: #234165;
+    transition: all 0.3s;
+}
+
+.search-box > button:hover i {
+    color: white;
+    transition: all 0.3s;
+}
+
+.menu {
+    float: left;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    width: 78%;
+}
+
+.menu > ul {
+    height: 30px;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    list-style-type: none;
+    /* width: 150px; */
+    width: 16%;
+    margin-left: 0.3%;
+    float: left;
+    font-size: 12px;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: #E1D4BB;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px 25px;
+    line-height: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.menu ul li a:hover {
+    background-color: #fff6e7;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+.menu ul li ul.submenu {
+    display: none; 
+    padding: 0; 
+}
+
+.menu ul li ul.submenu li {
+    width: 95%;
+    margin: 1px 2.5%;
+}
+
+.menu ul li ul.submenu li a {
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+}
+
+.menu ul li ul.submenu li a:hover {
+    font-size: 14px;
+}
+
+/* CONTENT */
+.content {
+    grid-area: gContent;
+    padding: 15px 0px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.content > div {
+    margin: 20px 20px;
+}
+
+.about h4 {
+    text-align: center;
+    font-weight: bold;
+}
+/* FOOTER */
+.foot {
+    grid-area: gFoot;
+    padding: 15px 5%;
+    background-color: #A7D0CD;
+    border-radius: 10px;
+}
+
+.foot .foot-container {
+    display: flex;
+}
+
+.foot .foot-container .foot-box {
+    padding: 0 10px;
+    margin: 0px auto;
+    
+}
+
+.foot .foot-container .foot-box h6 {
+    font-weight: bold;
+    color: black;
+}
+
+.foot .foot-container .foot-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.foot .foot-container .foot-box ul li {
+    margin: 5px 0px;
+}
+
+.foot .foot-container .foot-box ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+
+.foot .foot-container .foot-box ul li a:hover {
+    position: relative;
+    left: 5px;
+}
+
+#qr {
+    margin: auto;
+    width: 50%;
+}
+
+#qr img {
+    border-radius: 5px;
+}
+
+.address {
+    border-top: 1px solid black;
+}
+
+.address p {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+    color: black;
+}
+
+.address p span {
+    color: black;
+}
+@media screen and (max-width: 1399px) {
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 40px auto auto;
+        grid-template-areas: 
+        'gHead'
+        'gNav'
+        'gContent'
+        'gFoot';
+    }
+    .head .head-left .logo {
+        height: 40px;
+    }
+    .head .head-left .name {
+        height: 17px;
+    }
+    .head .head-right .head-icon {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+    .head .head-right .head-icon a p.fa {
+        font-size: 20px !important;
+    }
+    .menu {
+        padding: 5px 0px;
+    }
+    .menu ul li {
+        font-size: 11px;
+    }
+    .menu ul li a {
+        padding: 0px 10px;
+    }
+    .menu ul li a:hover {
+        font-size: 12px;
+    }
+    .search-box {
+        margin: 5px 0px;
+    }
+    .search-box > input {
+        height: 30px;
+        font-size: 12px;
+    }
+    .search-box > button {
+        width: 15%;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 490px) {
+    .container {
+        width: 90%;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 40px auto auto;
+        grid-template-areas: 
+        'gHead'
+        'gNav'
+        'gContent'
+        'gFoot';
+    }
+    .head .head-left .logo {
+        height: 35px;
+    }
+    .head .head-left .name {
+        height: 15px;
+    }
+    .head .head-right .head-icon {
+        padding: 12px 15px;
+        font-size: 10px;
+    }
+    .head .head-right .head-icon a p.fa {
+        font-size: 18px !important;
+    }
+    .head .head-right .head-icon a p.icon-name {
+        display: none;
+    }
+    .search-box {
+        margin: 5px 0px;
+        display: none;  
+    }
+    .menu {
+        padding: 5px 0;
+        width: 100%;
+        margin: auto;
+    }
+    .menu ul li {
+        list-style-type: none;
+        width: 16%;
+        margin-left: 0.5%;
+        float: left;
+        font-size: 10px;
+    }
+    .menu ul li a {
+        display: block;
+        text-decoration: none;
+        background-color: #E1D4BB;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        padding: 0px 10px;
+        line-height: 30px;
+        border-radius: 7px;
+        overflow: hidden;
+        transition: 0.6s;
+    }
+    .menu ul li a:hover {
+        background-color: #fff6e7;
+        font-size: 12px;
+        transition: all 0.2s;
+    }   
+    .menu ul li:hover .submenu {
+        display: none;
+    }
+    .foot .foot-container .foot-box {
+        padding: 0 5px;
+    }
+    .foot .foot-container .foot-box h6 {
+        font-size: 14px;
+    }
+    .foot .foot-container .foot-box ul li a {
+        font-size: 9px;
+    }
+    .foot .foot-container .foot-box ion-icon {
+        font-size: 9px !important;
+    }
+    #qr img {
+        width: 120%;
+    }
+    .address p {
+        text-align: center;
+        font-size: 12px;
+        margin: 10px;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .container {
+        width: 90%;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 40px auto auto;
+        grid-template-areas: 
+        'gHead'
+        'gNav'
+        'gContent'
+        'gFoot';
+    }
+    .head .head-left .logo {
+        height: 30px;
+    }
+    .head .head-left .name {
+        height: 11px;
+    }
+    .head .head-right .head-icon {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+    .head .head-right .head-icon a p.fa {
+        font-size: 18px !important;
+    }
+    .head .head-right .head-icon a p.icon-name {
+        display: none;
+    }
+    .search-box {
+        margin: 5px 0px;
+        display: none;  
+    }
+    .menu {
+        padding: 5px 0;
+        width: 100%;
+        margin: auto;
+    }
+    .menu ul li {
+        list-style-type: none;
+        width: 16%;
+        margin-left: 0.5%;
+        float: left;
+        font-size: 8px;
+    }
+    .menu ul li a {
+        display: block;
+        text-decoration: none;
+        background-color: #E1D4BB;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        padding: 0px 5px;
+        line-height: 30px;
+        border-radius: 7px;
+        overflow: hidden;
+        transition: 0.6s;
+    }
+    .menu ul li a:hover {
+        background-color: #fff6e7;
+        font-size: 10px;
+        transition: all 0.2s;
+    }   
+    .menu ul li:hover .submenu {
+        display: none;
+    }
+    .left {
+        display: none;
+    }
+    .content > div > h5 {
+        font-size: 14px;
+    }
+    .col-md-3 {
+        display:contents;
+    }
+    .products {
+        width: 23%;
+        margin: 1%;
+    }
+    .progress {
+        width: 100%;
+        height: 10px !important;
+        margin: 3px 0px;
+        border-radius: 10px !important;
+    }
+    .saleprice ~p {
+        text-align: center;
+    }
+    .products a h5 {
+        font-size: 15px;
+    }
+    .products a h6 {
+        font-size: 12px;
+    }
+    .products a p {
+        font-size: 11px;
+    }
+    .rating {
+        margin: 0px 5px 0px 0px;
+        font-size: 10px;
+    }
+    .contact {
+        width: 96%;
+        margin: 10px 2% 0 2%;
+    }
+    .comment {
+        width: 96%;
+        margin: 10px 2% 0 2%;
+    }
+    .comment form .box {
+        margin: 5px 0;
+        width: 90%;
+        padding: 3px 6px;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-transform: none;
+        background-color: whitesmoke;
+    }
+    .foot .foot-container .foot-box {
+        padding: 0 5px;
+    }
+    .foot .foot-container .foot-box h6 {
+        font-size: 10px;
+    }
+    .foot .foot-container .foot-box ul li a {
+        font-size: 7px;
+    }
+    .foot .foot-container .foot-box ion-icon {
+        font-size: 7px !important;
+    }
+    .address p {
+        text-align: center;
+        font-size: 10px;
+        margin: 5px;
+        color: black;
+    }
+}
